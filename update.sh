@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /srv/http/sim.alexjameswright.net
-sudo -u http git pull
+sudo -u http git pull origin master

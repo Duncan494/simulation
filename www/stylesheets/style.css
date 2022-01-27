@@ -7,27 +7,29 @@ html, body {
 .main {
     min-height: 100vh;
 }
-.main nav {
+nav {
     display: flex;
     background-color: gray;
     margin-bottom: 20px;
     height: 50px;
 }
-.main nav h1 {
-    padding: 0;
-    margin: 0 0 0 10px;
+nav > a {
+    text-decoration: none;
+    font-size: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 15px 0 15px;
+    color: rgb(123, 255, 0);
 }
-.main nav ul {
+nav ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style-type: none;
     background-color: gray;
 }
-.main nav ul li a {
+nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,14 +40,14 @@ html, body {
     background-color: transparent;
     transition: all 350ms;
 }
-.main nav ul li a:hover {
+nav ul li a:hover {
     background-color: rgb(99,99,99);
 }
-.main nav input:checked ~ ul {
+nav input:checked ~ ul {
     opacity: 1;
     visibility: visible;
   }
-.main nav input {
+nav input {
     display: none;
     position: absolute;
     opacity: 0;
@@ -53,7 +55,7 @@ html, body {
     height: 0;
     width: 0;
 }
-.main nav label {
+nav label {
     display: none;
     justify-content: center;
     align-items: center;
@@ -100,13 +102,13 @@ footer {
     color: black;
 }
 @media screen and (max-width: 600px) {
-    .main nav {
+    nav {
         justify-content: center;
     }
-    .main nav label {
+    nav label {
         display: flex;
     }
-    .main nav ul {
+    nav ul {
         position: absolute;
         transform: translateY(100%);
         top: 0;

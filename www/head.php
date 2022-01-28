@@ -7,8 +7,4 @@
 
     <link rel="stylesheet" href="/stylesheets/style.css">
 
-    <title>Simulations</title>
-</head>
-<body>
-    <?php include("{$_SERVER['DOCUMENT_ROOT']}/navbar.php"); ?>
-    <div class="main">
+    <title><?php echo($title); ?></title>

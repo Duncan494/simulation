@@ -40,13 +40,16 @@ nav ul li a {
     background-color: transparent;
     transition: all 350ms;
 }
+nav .active {
+    background-color: darkslategrey;
+}
 nav ul li a:hover {
     background-color: rgb(99,99,99);
 }
 nav input:checked ~ ul {
     opacity: 1;
     visibility: visible;
-  }
+}
 nav input {
     display: none;
     position: absolute;
@@ -60,38 +63,6 @@ nav label {
     justify-content: center;
     align-items: center;
     width: 30px;
-}
-.main .links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.main .links a {
-    border-radius: 25px;
-    display: inline-flex;
-    width: 300px;
-    height: 200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    border-style: solid;
-    border-color: black;
-}
-.main .links a .text {
-    padding: 10px;
-    border-radius: 15px;
-    background-color: transparent;
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    transition: all 350ms;
-}
-.main .links a:hover .text {
-    background-color: rgb(80, 80, 80);
-    color: blue;
 }
 footer {
     padding: 10px;

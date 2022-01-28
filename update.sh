@@ -1,4 +1,5 @@
 #!/bin/bash
 
 cd /srv/http/sim.alexjameswright.net
-sudo -u http git pull origin master
+sudo -u http git fetch
+sudo -u http git reset --hard orgin/deploy

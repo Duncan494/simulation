@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/stylesheets/style.css")
+        title Sims - #{title}
+        block head
+    body
+        .main
+            nav
+                input#switch(type="checkbox")
+                label(for="switch")
+                a(href="/" class=title=="Simulations" ? 'active':'') Simulations
+                - var pages = {'About': '/about/'};
+                ul
+                    each href, name in pages 
+                        li
+                            a(href=href class=title==name ? 'active':'') #{name}
+            block content
+        footer Alex Wright and Jonathan Oakley

@@ -14,7 +14,7 @@ const { src, dest, parallel, series, watch } = require('gulp'),
     browsersync = require('browser-sync');
 
 const basedir = 'www-src/';
-const destination = 'site/';
+const destination = 'www/';
 
 function clear() {
     return src(destination, {

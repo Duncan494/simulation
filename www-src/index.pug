@@ -1,7 +1,9 @@
 extends /includes/layout.pug
+block variables
+    - var title = "Simulations";
 block head
     link(rel="stylesheet", href="style.css")
 block content
-    - var title = "Simulations";
-    a(href="/half-life/" style="background-image: url('/images/radiation-counters.jpg')")
-        #text Half-Life Simulation
+    ul.links
+        li
+            a(href="/half-life/" style="background-image: url('/images/radiation-counters.jpg')") Half-Life Simulation

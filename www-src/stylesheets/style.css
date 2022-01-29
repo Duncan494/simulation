@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.main {
+    min-height: 100vh;
+}
+nav {
+    display: flex;
+    background-color: gray;
+    margin-bottom: 20px;
+    height: 50px;
+}
+nav > a {
+    text-decoration: none;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px 0 15px;
+    color: rgb(123, 255, 0);
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    background-color: gray;
+}
+nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    transition: all 350ms;
+}
+nav .active {
+    background-color: darkslategrey;
+}
+nav ul li a:hover {
+    background-color: rgb(99,99,99);
+}
+nav input:checked ~ ul {
+    opacity: 1;
+    visibility: visible;
+}
+nav input {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+nav label {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+}
+footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    min-height: 40px;
+    background-color: rgb(99, 99, 99);
+    color: black;
+}
+@media screen and (max-width: 600px) {
+    nav {
+        justify-content: center;
+    }
+    nav label {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        transform: translateY(100%);
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 350ms;
+        flex-wrap: wrap;
+    }
+}

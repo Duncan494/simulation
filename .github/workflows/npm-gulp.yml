@@ -24,5 +24,6 @@ jobs:
 
     - name: Build
       run: |
-        npm i gulp gulp-cli gulp-pug gulp-rename
-        gulp
+        cd gulp
+        npm install --global gulp-cli
+        gulp -f gulp/gulpfile.js --cwd .

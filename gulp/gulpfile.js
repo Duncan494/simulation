@@ -74,18 +74,18 @@ function img() {
 function pugphp() {
     const source = basedir + '**/*.pug';
     return src(source)
-        .pipe( pug({
+        .pipe(pug({
             basedir: basedir,
             pretty: "\t",
             filters: {
             php: pugPHPFilter
             }
         }))
-    .pipe(rename(function (path) {
-        path.extname = ".php"
-    }))
-    .pipe(dest(destination))
-    .pipe(browsersync.stream());
+        .pipe(rename(function (path) {
+            path.extname = ".php"
+        }))
+        .pipe(dest(destination))
+        .pipe(browsersync.stream());
 }
 
 function connectsync() {

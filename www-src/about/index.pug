@@ -2,8 +2,14 @@ extends /includes/layout.pug
 block variables
     - var title = "About";
 block head
-    //link(rel="stylesheet", href="style.css")
+    link(rel="stylesheet", href="style.css")
+    script.
+        function playscream() {
+        var audio = new Audio('scream.mp3');
+        audio.play();
+        }
 block content
     ul
         li Alex Wright 
         li Jonathan Oakley
+        li#special(onclick='playscream()') Molly Granger
